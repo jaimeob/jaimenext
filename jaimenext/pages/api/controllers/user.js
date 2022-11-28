@@ -1,0 +1,3 @@
+exports.postData() = () =>{
+res.send()
+}
