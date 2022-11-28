@@ -29,11 +29,6 @@ export default async function handler(req, res) {
     const googleSheets = google.sheets({ version: "v4", auth: client });
 
     const spreadsheetId = "1gPWl1WXR0VJyCorbOyhD0NhOOHIdW-tmcjJ3oHeasEM";
-    // const getRows = await googleSheets.spreadsheets.values.get({
-    //   auth,
-    //   spreadsheetId,
-    //   range: "Respuestas de formulario 1",
-    // });
 
     await googleSheets.spreadsheets.values.append({
       auth,
@@ -63,24 +58,10 @@ export default async function handler(req, res) {
       },
     });
 
-    // await googleSheets.spreadsheets.values.append({
-    //     auth,
-    //     spreadsheetId: spreadsheetId,
-    //     range: rango,
-    //     valueInputOption: "USER_ENTERED",
-    //     resource: {
-    //         values: [
-    //             [modelo, nombre, apellidos, email]
-    //         ]
-    //     }
-    // })
-
-    // res.status(200).send({
-    //     status: 200,
-    //     data: linkGift
-    // })
 
     return res.status(200).json({ sucess: "Guardado con exito" });
   }
+  return  res.status(400).json({ error: 'Error al guardar ' })
+
 }
 // return  res.status(400).json({ error: 'Error' })

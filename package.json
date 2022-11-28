@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "jaimenext",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,14 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "cors": "^2.8.5",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.5",
     "express": "^4.18.2",
-    "googleapis": "^109.0.1",
     "next": "13.0.5",
-    "nextjs-cors": "^2.1.2",
-    "nodemon": "^2.0.20",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   }
