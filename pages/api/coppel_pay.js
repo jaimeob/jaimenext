@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     // Options
     methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
     origin: '*',
-    optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+    optionsSuccessStatus: 200, //
  });
 
  
@@ -64,4 +64,3 @@ export default async function handler(req, res) {
   return  res.status(400).json({ error: 'Error al guardar ' })
 
 }
-// return  res.status(400).json({ error: 'Error' })
